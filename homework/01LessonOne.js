@@ -115,27 +115,28 @@ var notNotTrue = !!true;
 // ****
 
 var bob = 'bob';
-var emptyString = ' ';
+var emptyString = '  ';
 
 // Problem 17:
 // What is the value of !!bob would be //=> true
 
-var notNotBob;
+
+var notNotBob = true;
 
 // Problem 18:
 // What is the value of !!emptyString would be //=> true
 
-var notNotEmptyString;
+var notNotEmptyString = true;
 
 // Problem 19:
 // What is the value of !null //=> false
 
-var notNull;
+var notNull = true;
 
 // Problem 20:
 // What is the value of !!undefined //=> true
 
-var notNotUndefined;
+var notNotUndefined = false;
 
 // ****
 // Concept Checkpoint
@@ -153,47 +154,47 @@ var notNotUndefined;
 
 // Problem 21
 // What is the value of 4 === 4 //=> true
-var fourEqualTofour;
+var fourEqualTofour = true;
 
 // Problem 22:
 // What is the value of 4 !== 4 //=> false
-var fourNotEqualTofour;
+var fourNotEqualTofour = false;
 
 // Problem 23:
 // What is the value of -3 === 10 //=> false
-var negativeThreeEqualToTen;
+var negativeThreeEqualToTen = false;
 
 // Problem 24:
 // What is the value of -3 < 10 //=> true
-var negativeThreeLessThanTen;
+var negativeThreeLessThanTen = true;
 
 // Problem 25:
 // What is the value of -3 <= 10 //=> true
-var negativeThreeLessThanOrEqualToTen;
+var negativeThreeLessThanOrEqualToTen = true ;
 
 // Problem 26:
 // What is the value of -3 > 10 //=> false
-var negativeThreeGreaterThanTen;
+var negativeThreeGreaterThanTen = false;
 
 // Problem 27:
 // What is the value of -3 >= 10 //=> false
-var negativeThreeGreaterThanOrEqualToTen;
+var negativeThreeGreaterThanOrEqualToTen = false;
 
 // Problem 28:
 // What is the value of '4' == 4 //=> true
-var stringFourEqualsNumberFour;
+var stringFourEqualsNumberFour = true;
 
 // Problem 29:
 // What is the value of '4' != 4 //=> false
-var stringFourNotEqualsNumberFour;
+var stringFourNotEqualsNumberFour = false;
 
 // Problem 30:
 // What is the value of '4' === 4 //=> false
-var stringFourStrictEqualsNumberFour;
+var stringFourStrictEqualsNumberFour = false;
 
 // Problem 31:
 // What is the value of '4' !== 4 //=> true
-var stringFourStrictNotEqualsNumberFour;
+var stringFourStrictNotEqualsNumberFour = true;
 
 // ****
 // Concept Checkpoint
@@ -420,3 +421,4 @@ describe('Lesson 1 Homework', function () {
   });
 
 });
+// 
