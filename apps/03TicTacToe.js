@@ -64,6 +64,12 @@ function diagonalWin() {
     }
 }
 
+// function diagonalWin() {
+//     // another way to do this....
+//     return (board[0][0] === playerTurn && board[1][1] === playerTurn && board[2][2] === playerTurn) |
+//            (board[2][0] === playerTurn && board[1][1] === playerTurn && board[0][2] === playerTurn) ;
+// }
+
 
 function checkForWin() {
     // Your code here
@@ -72,6 +78,16 @@ function checkForWin() {
         return true;
     }
 }
+// function ticTacToe(row, column) {
+
+//     if (!row || !column || !board[row][column]) {}
+//     if (board[row][column] === " ") {
+//         board[row][column] = playerTurn;
+//         checkForWin()
+//         playerTurn = (playerTurn === 'X') ? 'O' : 'X';
+//     }
+// }
+
 
 function ticTacToe(row, column) {
     // Your code 
