@@ -93,4 +93,3 @@ describe('#notEqualTo()', function () {
     assert.equal(notEqualTo(6, '6'), true);
   });
 });
-// 
