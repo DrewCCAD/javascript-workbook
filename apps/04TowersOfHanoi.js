@@ -1,5 +1,3 @@
-'use strict';
-
 var assert = require('assert');
 var readline = require('readline');
 var rl = readline.createInterface({
@@ -19,30 +17,64 @@ function printStacks() {
   console.log("c: " + stacks.c);
 }
 
-function movePiece() {
-  // Your code here
 
+function movePiece(startStack, endStack) {
+  stacks[endStack].push(stacks[startStack].pop());
 }
+// function movePiece(startStack, endStack) {
+//     startStack.pop();
+//     endStack.push(stacks);
+// }
+//  get peice off the start stack.
+//  move to end stack
+//  and save it
 
-function isLegal() {
-  // Your code here
-
+function isLegal(startStack, endStack) {
+  return !(stacks[startStack][stacks[startStack].length - 1] > stacks[endStack][stacks[endStack].length - 1])
 }
+// get a refrence to actual start stack and save it.
+// does start stack have anyting in it?
+// get a reference to  the actual end stack and save it.
+// is the piece on top bigger or smaller then the piece ontop of the endstack.
+// is there anything in the end stack if not dont have to check.
+// if bad return something
+// if good return something else
 
 function checkForWin() {
-  // Your code here
-
+  var isWinning = stacks.b.length === 4 || stacks.c.length === 4;
+  if (isWinning) {
+    console.log("You won! board will reset now");
+    process.exit();
+  }
+  return isWinning;
 }
+// does the stack have a leingth of 4
+// function checkForWin() {
+//     if (stacks.c.length === 4 || stacks.b.length === 4) {
+//         cnsole.log("you win, board is reset!");
+//         stacks = {
+//             a: [4, 3, 2, 1],
+//             b: [],
+//             c: []
+//         };
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 function towersOfHanoi(startStack, endStack) {
-  // Your code here
-
+  startStack = startStack.toLowerCase();
+  endStack = endStack.toLowerCase();
+  isLegal(startStack, endStack);
+  movePiece(startStack, endStack);
+  checkForWin();
 }
 
 function getPrompt() {
   printStacks();
-  rl.question('start stack: ', (startStack) => {
-    rl.question('end stack: ', (endStack) => {
+  rl.question('Please choose a starting stack to remove a block from: ', (startStack) => {
+    rl.question('Please choose a stack to place block on: ', (endStack) => {
       towersOfHanoi(startStack, endStack);
       getPrompt();
     });
