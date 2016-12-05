@@ -1,27 +1,28 @@
 {
-  "name": "javascript-workbook",
-  "version": "2.0.0",
-  "description": "Workbook for Austin Coding Academy Javascript Course",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AustinCodingAcademy/javascript-workbook.git"
-  },
-  "author": "Kevin Colten",
-  "scripts": {
-    "test": "mocha",
-    "start": "cd . && http-server -c-1"
-  },
-  "bugs": {
-    "url": "https://github.com/AustinCodingAcademy/javascript-workbook/issues"
-  },
-  "homepage": "https://github.com/AustinCodingAcademy/javascript-workbook#readme",
-  "dependencies": {
-    "colors": "^1.1.2"
-  },
-  "devDependencies": {
-    "http-server": "^0.9.0",
-    "jsdom": "^9.4.2",
-    "mocha": "^2.4.5",
-    "nock": "^8.0.0"
-  }
+    "name": "javascript-workbook",
+    "version": "2.0.0",
+    "description": "Workbook for Austin Coding Academy Javascript Course",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AustinCodingAcademy/javascript-workbook.git"
+    },
+    "author": "Kevin Colten",
+    "scripts": {
+        "test": "mocha",
+        "start": "cd . && http-server -c-1",
+        "server": "http-server"
+    },
+    "bugs": {
+        "url": "https://github.com/AustinCodingAcademy/javascript-workbook/issues"
+    },
+    "homepage": "https://github.com/AustinCodingAcademy/javascript-workbook#readme",
+    "dependencies": {
+        "colors": "^1.1.2"
+    },
+    "devDependencies": {
+        "http-server": "^0.9.0",
+        "jsdom": "^9.4.2",
+        "mocha": "^2.4.5",
+        "nock": "^8.0.0"
+    }
 }

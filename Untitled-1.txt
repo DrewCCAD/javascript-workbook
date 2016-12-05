@@ -1,0 +1,3 @@
+Checkers notes
+
+separation of concerns what our class can do. class can have a function or propertys.
