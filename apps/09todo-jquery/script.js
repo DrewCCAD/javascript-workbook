@@ -23,8 +23,8 @@ $(document).ready(function() {
         $(this).find('input[type="text"]').val('')
         $('#todo-list').sortable();
     });
-    $('#todo-list').on('click','checkbox', 'click', 'button', function(event) {
-        event.preventDefault();
+    // input[type="checkbox" i]
+    $('#todo-list').on('click', 'input[type="checkbox"]', function() {
         $(this).parent().remove();
     });
 
