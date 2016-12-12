@@ -93,22 +93,22 @@ function getPrompt() {
 
 if (typeof describe === 'function') {
 
-    describe('#mastermind()', function () {
-        it('should register a guess and generate hints', function () {
+    describe('#mastermind()', function() {
+        it('should register a guess and generate hints', function() {
             solution = 'abcd';
             mastermind('aabb');
             assert.equal(board.length, 1);
         });
-        it('should be able to detect a win', function () {
+        it('should be able to detect a win', function() {
             assert.equal(mastermind(solution), 'You guessed it!');
         });
     });
 
-    describe('#generateHint()', function () {
-        it('should generate hints', function () {
+    describe('#generateHint()', function() {
+        it('should generate hints', function() {
             assert.equal(generateHint('abcd', 'abdc'), '2-2');
         });
-        it('should generate hints if solution has duplicates', function () {
+        it('should generate hints if solution has duplicates', function() {
             assert.equal(generateHint('abcd', 'aabb'), '1-1');
         });
 
