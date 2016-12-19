@@ -1,15 +1,4 @@
-'use strict';
 
-$(document).ready(function() {
-    // Put app logic here
-    var block = div;
-    var blockmoving = $(this).children().last().detach();
-    var number = $("[data - block = '100']")
-    var numberblockmoving = blockmoving.data("block")
-    var numberofblock = block.data("block");
-    var reallyanumber = number("110")
-
-});
 // Moving Blocks
 //     On click() of a[data - stack], detach() the last() of the children()
 //     and set it equal to a variable called block.Then, when another[data - stack]
@@ -27,3 +16,36 @@ $(document).ready(function() {
 //   Create a function checkForWin() that checks .forEach() stack and determines if one of the
 //   last two stacks has four [data-block]s. Run this function after every move. If you won,
 //   put the .text 'You Won! inside the div#announce-game-won element.
+'use strict';
+
+$(document).ready(function() {
+  // my code:
+  var $block = null;
+  var lastBlock = $(this).children().last().data('block');
+
+  $('[data-stack]').on('click', function(){
+    if(!$block){
+      $block = $(this).children().last().detach();
+    } else {
+      var $children = $(this).children();
+      var blockValue = $block.data('block');
+
+      if($children.length === 0 ||
+      $children.last().data('block') > blockValue){
+        $(this).append($block);
+        $block = null;
+      } else {
+        console.log('invalid move!!' );
+      }
+
+      function checkForWin(){
+        if($('[data-stack="2"]').children().length === 4 ||
+        $('[data-stack="3"]').children().length === 4){
+          console.log("You Won!");
+          $('#announce-game-won').text('You Won!');
+        }
+      }
+      checkForWin();
+    }
+  });
+});
