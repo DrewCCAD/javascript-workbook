@@ -1,0 +1,70 @@
+ body {
+     background-color: black;
+ }
+ 
+ i {
+     color: #337ab7;
+     padding-right: 8px;
+ }
+ 
+ .gist h3 {
+     font-family: "Comic Sans MS", cursive, sans-serif;
+     color: white;
+ }
+ 
+ #posts {
+     background-color: lightgray;
+     border: 1px solid;
+     border-radius: 20px;
+     height: 500px;
+ }
+ 
+ .lists ul {
+     list-style: none;
+     padding-top: 10%;
+     text-decoration: none;
+     font-size: 17px;
+ }
+ 
+ #post {
+     background-color: lightgray;
+     border: 1px solid;
+     border-radius: 20px;
+     height: 250px;
+ }
+ 
+ #post h3 {
+     padding-top: 1%;
+     padding-left: 5%;
+ }
+ 
+ #post p {
+     padding-top: 2%;
+     padding-left: 5%;
+     padding-right: 5%;
+ }
+ 
+ #post li {
+     padding-top: 2%;
+     padding-left: 5%;
+     padding-right: 5%;
+ }
+ 
+ #comments {
+     background-color: lightgray;
+     border: 1px solid;
+     border-radius: 20px;
+     height: 195px;
+ }
+ 
+ @media (max-width: 768px) {
+     #posts {
+         height: 150px;
+     }
+     #post {
+         height: 180px;
+     }
+     #comments {
+         height: 100px;
+     }
+ }
